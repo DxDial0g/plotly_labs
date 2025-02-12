@@ -1,0 +1,111 @@
+[[tool.poetry.source]]
+name = "papitamodels"
+url = "https://gitlab.com/api/v4/projects/51252950/packages/pypi/simple/"
+priority = "explicit"
+
+[tool.poetry]
+name = "plotly_labs"
+version = "0.0.1"
+description = "Plotly Labs"
+readme = "README.md"
+package-mode = false
+authors = ["DxDi@l0g"]
+include = [
+    "README.md",
+    "configs"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.12"
+
+[tool.poetry.group.dashboard.dependencies]
+contourpy = "1.2.1"
+plotly = "5.22.0"
+plotly-express = "0.4.1"
+dash = "2.18.2"
+dash-bootstrap-components = "1.6.0"
+dash-bootstrap-templates = "1.3.0"
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.25.1"
+pre-commit = "^3.7.1"
+flake8-pyproject = "^1.2.3"
+flake8 = "7.1.1"
+ruff = "0.6.5"
+
+[tool.poetry.group.infra.dependencies]
+pylint = "2.13.5"
+coverage = "6.3.2"
+
+[build-system]
+requires = ["poetry>=1.1.13"]
+build-backend = "poetry.masonry.api"
+
+[tool.ruff]
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".ipynb_checkpoints",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pyenv",
+    ".pytest_cache",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    ".vscode",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "site-packages",
+    "venv",
+    "*.ipynb"
+]
+extend-exclude = ["demo.ipynb"]
+line-length = 120
+indent-width = 4
+target-version = "py311"
+required-version = ">=0.6.5"
+unsafe-fixes = false
+
+[tool.ruff.lint]
+exclude = [
+    "demo.ipynb"
+]
+ignore = []
+fixable = ["ALL"]
+unfixable = []
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+preview = true
+skip-magic-trailing-comma = false
+line-ending = "auto"
+docstring-code-format = true
+
+[tool.isort]
+skip = [".gitignore", ".dockerignore"]
+extend_skip = [".md", ".json", ".yaml", ".yml", ".sh"]
+py_version=311
+atomic = true
+profile = "black"
+line_length = 120
+skip_gitignore = true
+
+[tool.flake8]
+ignore = ["E203", "W503"]
+exclude = [".git", "__pycache__", "dist", "*.ipynb"]
+max-line-length = 120
+max-complexity = 18

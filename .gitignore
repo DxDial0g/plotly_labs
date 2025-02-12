@@ -1,0 +1,41 @@
+# Python auto-generated
+__pycache__/
+**.pyc
+build/
+dist/
+papita.egg-info/
+.dccache
+.ruff_cache/
+.papita_storage/
+.*venv*
+
+# Ignore files
+.env*
+.python-gitlab.cfg
+.test.yaml
+/results/
+.DS_Store
+test.ipynb
+.tmp*
+*.bkp
+*.dtmp
+localstack/volume/cache/
+.reqs/
+
+# VSCode auto-generated
+.vscode/
+
+# NPM Auto-Generated
+node_modules/
+
+# setuptools_scm
+_version.py
+poetry.lock
+
+# serialization junk
+*.pkl*
+*.pickle*
+
+# localstack Auto-generated
+orchestrator/localstack/volume
+orchestrator/localstack/aws
