@@ -1,8 +1,8 @@
 # Plotly Labs
 
-## Dynamic Callbacks - Interactive Data Table with Custom Callbacks Dashboard Project
+# Dynamic Callbacks - Interactive Data Table with Custom Callbacks Dashboard Project
 
-### Project Overview
+## Project Overview
 This project implements a dynamic web-based dashboard using Dash that displays interactive data tables. The application allows users to create and interact with multiple data tables through a simple interface.
 
 > [!TIP]
@@ -21,9 +21,9 @@ This project implements a dynamic web-based dashboard using Dash that displays i
 >    * Block until completion
 
 
-### Core Components
+## Core Components
 
-#### 1. Base Architecture
+### 1. Base Architecture
 ```python
 class Figure:
     """Base abstract class defining the interface for all figure components"""
@@ -31,7 +31,7 @@ class Figure:
     - register_callback(): Handles callback registration
 ```
 
-#### 2. Table Implementation
+### 2. Table Implementation
 ```python
 class TableBuilder(Figure):
     """Implements interactive data tables with the following features:
@@ -42,13 +42,13 @@ class TableBuilder(Figure):
     """
 ```
 
-#### 3. Main Application
+### 3. Main Application
 - Creates a Dash web application
 - Implements dynamic table generation
 - Manages application state through Context
 - Handles user interactions via callbacks
 
-### Key Features
+## Key Features
 
 1. **Dynamic Table Generation**
    - Tables created on-demand via button click
@@ -65,7 +65,7 @@ class TableBuilder(Figure):
    - Flexible data structure handling
    - Efficient data updates
 
-### Technical Architecture
+## Technical Architecture
 
 ```mermaid
 graph TD
@@ -78,7 +78,7 @@ graph TD
     G --> H[Interactive Features]
 ```
 
-### Usage Example
+## Usage Example
 
 ```python
 # 1. Initialize the application
@@ -101,7 +101,7 @@ Context(
 app.run_server(debug=True)
 ```
 
-### Key Components Interaction
+## Key Components Interaction
 
 1. **Data Flow**
    - Raw data → TableBuilder
@@ -120,7 +120,7 @@ app.run_server(debug=True)
    - Interactive cell selection
    - Informative alerts
 
-### Technical Requirements
+## Technical Requirements
 
 - Python with Dash framework
 - Pandas for data handling
