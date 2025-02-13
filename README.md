@@ -8,13 +8,16 @@ This project implements a dynamic web-based dashboard using Dash that displays i
 > [!TIP]
 > How Callbacks Work in the Main Thread:
 >
-> 1. Registration Phase
+> 1. Registration Phase:
+>
 >    When you define a callback using the @callback decorator, Dash registers it during the application initialization. Callbacks are stored in the app's _callback_list internally.
 >
-> 2. Event Loop Integration
+> 2. Event Loop Integration:
+>
 >    Dash runs on Flask's development server by default. The callbacks are handled asynchronously using Flask's event loop. Each callback is executed in the main thread, but they're managed through an event queue
 >
-> 3. Threading Behavior
+> 3. Threading Behavior:
+>
 >    By default, callbacks run sequentially in the main thread. When multiple callbacks are triggered:
 >    * They form a queue
 >    * Execute one after another
