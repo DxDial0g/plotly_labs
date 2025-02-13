@@ -126,5 +126,3 @@ app.run_server(debug=True)
 - Pandas for data handling
 - Dash Bootstrap Components for styling
 - Modern web browser for display
-
-This project demonstrates a well-structured approach to building interactive data visualizations with clear separation of concerns, maintainable code architecture, and user-friendly interface design.
